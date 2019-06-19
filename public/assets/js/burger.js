@@ -2,6 +2,7 @@ $(function () {
     $(".change-devoured").on('click', function (event) {
         var id = $(this).data('id');
         console.log(id)
+        console.log($(this).newDevoured);
         $.ajax("/api/burgers/" + id, {
             type: 'PUT',
             devoured: true

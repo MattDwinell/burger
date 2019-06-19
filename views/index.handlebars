@@ -1,26 +1,37 @@
-<h2> Consumeth the burger.</h2>
-<img src="/public/assets/img/burger.jpg" width="200px" height = "auto" alt='burger image'>
-<p>not yet devoured</p>
-<ul>
-{{#each burgers}}
-{{#unless devoured}}
-{{>burgers/burger-block devoured=false}}
-{{/unless}}
-{{/each}}
-</ul>
-<p>already devoured</p>
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    {{> burgers/burger-block devoured=true }}
-    {{/if}}
-    {{/each}}
-</ul>
-<h3>Create new burger</h3>
-<form class="create-form">
-    <div class="form-group">
-        <label for='burgerTextName'>Name of Burger:</label>
-        <input type='text' id ='burgerText' name='burger_name'>
+<div class='center-align'>
+<h2 class="head" >Consumeth the burger.</h2>
+<img src="https://cdn.pixabay.com/photo/2016/03/31/19/41/bubble-1295213_960_720.png" width="200px" height="auto"
+    alt='burger image'>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col s6">
+            <p>not yet devoured</p>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{>burgers/burger-block devoured=false}}
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col s6">
+            <p>already devoured</p>
+            <ul>
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block devoured=true }}
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
-    <button type='submit'>Create Masterpiece</button>
-</form>
+    <h3>Create new burger</h3>
+    <form class="create-form">
+        <div class="form-group">
+            <label for='burgerTextName'>Name of Burger:</label>
+            <input type='text' id='burgerText' name='burger_name'>
+        </div>
+        <button type='submit'>Create Masterpiece</button>
+    </form>
+</div>
